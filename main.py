@@ -1,6 +1,8 @@
 import time, win32con, win32api, win32gui
+from pywinauto import clipboard
 
-
+talk_name = '이해강'
+chat_command = '야스'
 
 def open_chatroom(name):
     hwndKakao = win32gui.FindWindow(None,'카카오톡')
@@ -37,7 +39,7 @@ def SendReturn(hwnd):
 
 
 def main():
-    talk_name = '이해강'
+    
     open_chatroom(talk_name)
     text = "test"
     kakao_sendtext(talk_name,text)
